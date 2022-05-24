@@ -32,19 +32,19 @@ const characters = [
 //***MAP***
 //1. Get array of all names
 const names = characters.map((character) => character.name);
-// console.log(names);
+console.log(names);
 //2. Get array of all heights
 const height = characters.map((character) => character.height);
-// console.log(height);
+console.log(height);
 //3. Get array of objects with just name and height properties
 const nameAndHeight = characters.map((charackter) => ({
   name: charackter.name,
   height: charackter.height,
 }));
-// console.log(nameAndHeight);
+console.log(nameAndHeight);
 //4. Get array of all first names
 const firstName = characters.map((charackter) => charackter.name.split(' ')[0]);
-// console.log(firstName);
+console.log(firstName);
 
 //***REDUCE***
 //1. Get total mass of all characters
