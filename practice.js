@@ -1,9 +1,14 @@
-const numbers = [1, 2, 3, 4, 5, undefined, null, 0];
+const movies = [
+  { title: 'a', year: 2018, rating: 4.5 },
+  { title: 'b', year: 2018, rating: 4.7 },
+  { title: 'c', year: 2018, rating: 3 },
+  { title: 'd', year: 2017, rating: 4.5 },
+];
 
-console.log(countTruthy(numbers));
+const title = movies
+  .filter((m) => m.year === 2018 && m.rating >= 4)
+  .sort((a, b) => a.rating - b.rating)
+  .reverse()
+  .map((m) => m.title);
 
-function countTruthy(array) {
-  let count = 0;
-  for (let value of array) if (value) count++;
-  return count;
-}
+console.log(title);
