@@ -114,25 +114,37 @@ const characters = [
 // console.log(byGender);
 
 //***EVERY***
-//1. Does every character have blue eyes?
-const allBlueEyes = characters.every(
-  (character) => character.eye_color === 'blue',
-);
-console.log(allBlueEyes);
-//2. Does every character have mass more than 40?
-const byMassOver = characters.every((character) => character.mass > 40);
-console.log(byMassOver);
-//3. Is every character shorter than 200?
-const byHeightOver = characters.every((character) => character.height < 200);
-console.log(byHeightOver);
-//4. Is every character male?
-const byGenderMale = characters.every(
-  (character) => character.gender === 'male',
-);
-console.log(byGenderMale);
+// //1. Does every character have blue eyes?
+// const allBlueEyes = characters.every(
+//   (character) => character.eye_color === 'blue',
+// );
+// console.log(allBlueEyes);
+// //2. Does every character have mass more than 40?
+// const byMassOver = characters.every((character) => character.mass > 40);
+// console.log(byMassOver);
+// //3. Is every character shorter than 200?
+// const byHeightOver = characters.every((character) => character.height < 200);
+// console.log(byHeightOver);
+// //4. Is every character male?
+// const byGenderMale = characters.every(
+//   (character) => character.gender === 'male',
+// );
+// console.log(byGenderMale);
 
 //***SOME***
 //1. Is there at least one male character?
+const atLeastOneMale = characters.some(
+  (character) => character.gender === 'male',
+);
+console.log(atLeastOneMale);
 //2. Is there at least one character with blue eyes?
+const atLeastOneBlueEyes = characters.some(
+  (character) => character.eye_color === 'blue',
+);
+console.log(atLeastOneBlueEyes);
 //3. Is there at least one character taller than 210?
+const atLeastOneHeight = characters.some((character) => character.height > 210);
+console.log(atLeastOneHeight);
 //4. Is there at least one character that has mass less than 50?
+const atLeastOneLessMass = characters.some((character) => character.mass < 50);
+console.log(atLeastOneLessMass);
