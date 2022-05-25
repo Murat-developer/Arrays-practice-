@@ -132,19 +132,34 @@ const characters = [
 // console.log(byGenderMale);
 
 //***SOME***
-//1. Is there at least one male character?
-const atLeastOneMale = characters.some(
-  (character) => character.gender === 'male',
+// //1. Is there at least one male character?
+// const atLeastOneMale = characters.some(
+//   (character) => character.gender === 'male',
+// );
+// console.log(atLeastOneMale);
+// //2. Is there at least one character with blue eyes?
+// const atLeastOneBlueEyes = characters.some(
+//   (character) => character.eye_color === 'blue',
+// );
+// console.log(atLeastOneBlueEyes);
+// //3. Is there at least one character taller than 210?
+// const atLeastOneHeight = characters.some((character) => character.height > 210);
+// console.log(atLeastOneHeight);
+// //4. Is there at least one character that has mass less than 50?
+// const atLeastOneLessMass = characters.some((character) => character.mass < 50);
+// console.log(atLeastOneLessMass);
+
+const numbers1 = [1, 2, 3, 4, 5, 6, 7];
+
+const newArrayOutput = numbers1
+  .filter((a) => a % 2 === 0)
+  .map((a) => a * a)
+  .reduce((a, b) => a + b);
+console.log(newArrayOutput);
+
+const numbers2 = [1, 2, 4, 8];
+
+const reduced = numbers2.reduce(
+  (accumulator, currentValue) => accumulator + currentValue,
 );
-console.log(atLeastOneMale);
-//2. Is there at least one character with blue eyes?
-const atLeastOneBlueEyes = characters.some(
-  (character) => character.eye_color === 'blue',
-);
-console.log(atLeastOneBlueEyes);
-//3. Is there at least one character taller than 210?
-const atLeastOneHeight = characters.some((character) => character.height > 210);
-console.log(atLeastOneHeight);
-//4. Is there at least one character that has mass less than 50?
-const atLeastOneLessMass = characters.some((character) => character.mass < 50);
-console.log(atLeastOneLessMass);
+console.log(reduced);
