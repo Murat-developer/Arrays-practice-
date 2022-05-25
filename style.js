@@ -95,29 +95,41 @@ const characters = [
 
 //***SORT***
 //1. Sort by mass
-const sortedByMass = characters.sort((a, b) => a.mass - b.mass); // Ascending order
-console.log(sortedByMass);
-//2. Sort by height
-const byHeight = characters.sort((a, b) => a.height - b.height);
-console.log(byHeight);
-//3. Sort by name
-const byName = characters.sort((a, b) => {
-  if (a.name < b.name) return -1;
-  return 1;
-});
-console.log(byName);
-//4. Sort by gender
-const byGender = characters.sort((a, b) => {
-  if (a.gender === 'female') return -1;
-  return 1;
-});
-console.log(byGender);
+// const sortedByMass = characters.sort((a, b) => a.mass - b.mass); // Ascending order
+// console.log(sortedByMass);
+// //2. Sort by height
+// const byHeight = characters.sort((a, b) => a.height - b.height);
+// console.log(byHeight);
+// //3. Sort by name
+// const byName = characters.sort((a, b) => {
+//   if (a.name < b.name) return -1;
+//   return 1;
+// });
+// console.log(byName);
+// //4. Sort by gender
+// const byGender = characters.sort((a, b) => {
+//   if (a.gender === 'female') return -1;
+//   return 1;
+// });
+// console.log(byGender);
 
 //***EVERY***
 //1. Does every character have blue eyes?
+const allBlueEyes = characters.every(
+  (character) => character.eye_color === 'blue',
+);
+console.log(allBlueEyes);
 //2. Does every character have mass more than 40?
+const byMassOver = characters.every((character) => character.mass > 40);
+console.log(byMassOver);
 //3. Is every character shorter than 200?
+const byHeightOver = characters.every((character) => character.height < 200);
+console.log(byHeightOver);
 //4. Is every character male?
+const byGenderMale = characters.every(
+  (character) => character.gender === 'male',
+);
+console.log(byGenderMale);
 
 //***SOME***
 //1. Is there at least one male character?
