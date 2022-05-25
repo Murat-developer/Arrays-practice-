@@ -76,28 +76,42 @@ const characters = [
 // console.log(totalNameCharacters);
 
 //***FILTER***
-//1. Get characters with mass greater than 100
-const greaterMass = characters.filter((character) => character.mass > 100);
-console.log(greaterMass);
-//2. Get characters with height less than 200
-const lessHeight = characters.filter((character) => character.height < 200);
-console.log(lessHeight);
-//3. Get all male characters
-const maleCharacter = characters.filter(
-  (character) => character.gender === 'male',
-);
-console.log(maleCharacter);
-//4. Get all female characters
-const femaleCharacter = characters.filter(
-  (character) => character.gender !== 'male',
-);
-console.log(femaleCharacter);
+// //1. Get characters with mass greater than 100
+// const greaterMass = characters.filter((character) => character.mass > 100);
+// console.log(greaterMass);
+// //2. Get characters with height less than 200
+// const lessHeight = characters.filter((character) => character.height < 200);
+// console.log(lessHeight);
+// //3. Get all male characters
+// const maleCharacter = characters.filter(
+//   (character) => character.gender === 'male',
+// );
+// console.log(maleCharacter);
+// //4. Get all female characters
+// const femaleCharacter = characters.filter(
+//   (character) => character.gender !== 'male',
+// );
+// console.log(femaleCharacter);
 
 //***SORT***
 //1. Sort by mass
+const sortedByMass = characters.sort((a, b) => a.mass - b.mass); // Ascending order
+console.log(sortedByMass);
 //2. Sort by height
+const byHeight = characters.sort((a, b) => a.height - b.height);
+console.log(byHeight);
 //3. Sort by name
+const byName = characters.sort((a, b) => {
+  if (a.name < b.name) return -1;
+  return 1;
+});
+console.log(byName);
 //4. Sort by gender
+const byGender = characters.sort((a, b) => {
+  if (a.gender === 'female') return -1;
+  return 1;
+});
+console.log(byGender);
 
 //***EVERY***
 //1. Does every character have blue eyes?
