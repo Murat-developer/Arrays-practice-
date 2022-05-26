@@ -5,11 +5,11 @@ const circle = {
   },
 };
 
-// const another = Object.assign(
-//   { color: 'yellow', name: 'Mary' },
-//   circle,
-// );
-// console.log(another);
+// for (let key in circle) console.log(key, circle[key]);
 
-const another = { ...circle };
-console.log(another);
+// for (let key of Object.keys(circle)) console.log(key);
+
+// for (let entries of Object.entries(circle))
+//   console.log(entries);
+
+if ('radius' in circle) console.log('yes');
