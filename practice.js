@@ -4,11 +4,12 @@ const circle = {
     console.log('draw');
   },
 };
-for (let key in circle) console.log(key, circle[key]);
 
-for (let key of Object.keys(circle)) console.log(key);
+// const another = Object.assign(
+//   { color: 'yellow', name: 'Mary' },
+//   circle,
+// );
+// console.log(another);
 
-for (let entries of Object.entries(circle))
-  console.log(entries);
-
-if ('radius' in circle) console.log('yes');
+const another = { ...circle };
+console.log(another);
