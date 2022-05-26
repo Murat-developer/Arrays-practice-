@@ -1,18 +1,14 @@
-const numbers = [1, 2, 3, 4];
+const circle = {
+  radius: 1,
+  draw() {
+    console.log('draw');
+  },
+};
+for (let key in circle) console.log(key, circle[key]);
 
-const output = move(numbers, 0, 1);
+for (let key of Object.keys(circle)) console.log(key);
 
-console.log(output);
+for (let entries of Object.entries(circle))
+  console.log(entries);
 
-function move(array, index, offset) {
-  const position = index + offset;
-  if (position >= array.length || position < 0) {
-    console.error('Invalid offset');
-    return;
-  }
-
-  const output = [...array];
-  const element = output.splice(index, 1)[0];
-  output.splice(position, 0, element);
-  return output;
-}
+if ('radius' in circle) console.log('yes');
