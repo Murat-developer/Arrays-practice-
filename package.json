@@ -1,0 +1,33 @@
+{
+  "name": "practice",
+  "version": "1.0.0",
+  "description": "",
+  "main": "practice.js / style.js",
+  "scripts": {
+    "watch": "nodemon ./practice.js -q",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Murat-developer/Arrays-practice-.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Murat-developer/Arrays-practice-/issues"
+  },
+  "homepage": "https://github.com/Murat-developer/Arrays-practice-#readme",
+  "devDependencies": {
+    "nodemon": "^2.0.16"
+  },
+  "nodemonConfig": {
+    "ignore": [
+      "test/*",
+      "docs/*",
+      "*/*.css",
+      "*/*.html"
+    ],
+    "delay": 0.1
+  }
+}
