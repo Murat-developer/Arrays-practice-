@@ -35,9 +35,8 @@ console.clear();
 //   },
 // ];
 
-function sum() {
-  let total = 0;
-  for (let value of arguments) total += value;
-  return total;
+function interest(principal, rate = 3.5, years = 5) {
+  return ((principal * rate) / 100) * years;
 }
-console.log(sum(1, 2, 3, 4, 5, 6));
+
+console.log(interest(1000));
