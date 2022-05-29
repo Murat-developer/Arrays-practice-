@@ -35,29 +35,23 @@ console.clear();
 //   },
 // ];
 
-const person = {
-  firstName: 'John',
-  lastName: 'Smith',
-  get fullName() {
-    return `${person.firstName} ${person.lastName}`;
-  },
-  set fullName(value) {
-    if (typeof value !== 'string')
-      throw new Error('Value is not a string');
+const ul = document.querySelector('.people');
 
-    const parts = value.split(' ');
-    if (parts.length !== 2)
-      throw new Error('Enter a first and last name');
+let people = ['mario', 'luigi', 'ryu', 'shaun', 'chun -li'];
 
-    this.firstName = parts[0];
-    this.lastName = parts[1];
-  },
-};
+// people.forEach((person, index) =>
+//   console.log(index, person),
+// );
 
-try {
-  person.fullName = '';
-} catch (e) {
-  console.log(e);
-}
+// const logPerson = (person, index) => {
+//   console.log(`${index} - Hello ${person}`);
+// };
 
-console.log(person);
+// people.forEach(logPerson);
+
+let html = ``;
+people.forEach((person) => {
+  html += `<li style = "color: purple ">${person}</li>`;
+});
+console.log(html);
+ul.innerHTML = html;
