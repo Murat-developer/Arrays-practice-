@@ -1,17 +1,16 @@
 console.clear();
 
-console.log(getCount(['a', 'e', 'i', 'o', 'u']));
+const numbers = [2, 1, 10];
+console.log(sumOfDifferences(numbers));
 
-function getCount(str) {
-  let vowelsCount = 0;
-  let vowels = ['a', 'e', 'i', 'o', 'u'];
-  for (var i = 0; i < str.length; i++) {
-    for (var v = 0; v < vowels.length; v++) {
-      if (str[i] === vowels[v]) {
-        vowelsCount++;
-      }
-    }
+function sumOfDifferences(arr) {
+  if (arr.length <= 1) {
+    return 0;
+  } else if (arr.length > 2) {
+    arr.sort((a, b) => b - a);
+    return arr[0] - arr[1] + (arr[1] - arr[2]);
+  } else {
+    arr.reverse();
+    return arr[0] - arr[1];
   }
-
-  return vowelsCount;
 }
